@@ -1,0 +1,14 @@
+version: "3"
+services:
+  booking: &booking
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    image: booking
+    tty: true
+    env_file:
+      - .env
+  booking_2:
+    <<: *booking
+    env_file:
+      - .env-1
