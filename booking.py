@@ -1,8 +1,8 @@
-# from selenium.webdriver.chrome.options import Options
-# from selenium import webdriver
-# from seleniumwire import webdriver
-# from selenium.webdriver.support.ui import WebDriverWait
-# from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.chrome.options import Options
+from selenium import webdriver
+from seleniumwire import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 # from selenium.common.exceptions import TimeoutException
 from urllib import response
 import requests
@@ -117,8 +117,7 @@ def web_driver_init():
     options.add_argument('–incognito')
 
 
-    web_driver = webdriver.Chrome(
-        executable_path='/usr/bin/chromedriver', options=options)
+    web_driver = webdriver.Chrome(options=options)
 
     return web_driver
 
